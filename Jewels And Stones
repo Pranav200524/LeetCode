@@ -1,0 +1,19 @@
+import java.util.HashMap;
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+        HashMap hm= new  HashMap();
+	         int res=0;
+	         for(int i=0; i<J.length();i++ ) 
+	         {
+	         hm.put(J.charAt(i),i);
+	         }
+	         for(int j=0;j<S.length();j++) 
+	         {
+	        	 if(hm.containsKey(S.charAt(j)))
+	        	 {
+	                   res++;
+	        	 }
+	         }
+	         return(res);
+    }
+}
