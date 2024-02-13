@@ -1,0 +1,20 @@
+class Solution {
+    public int finalValueAfterOperations(String[] operations) {
+          String key1="X--";
+		 String key3="--X";
+         int x=0;
+            String key2="X++";
+            String key4="++X";
+        for(int i=0;i<operations.length;i++){
+            if(key1.equals(operations[i])||key3.equals(operations[i])){
+                x--;
+            }
+           else if(key2.equals(operations[i])||key4.equals(operations[i])){
+               x++;
+           }
+
+        }
+        return x;
+        
+    }
+}
