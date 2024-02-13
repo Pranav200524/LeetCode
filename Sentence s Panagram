@@ -1,0 +1,26 @@
+import java.util.HashMap;
+class Solution {
+    public boolean checkIfPangram(String s) {
+        
+		HashMap hm=new HashMap();
+		char[] ch=s.toCharArray();
+	    for(int i=97;i<123;i++) 
+	    {
+	    	char a=(char)i;
+	    	hm.put(a, 0);
+	    }
+	    for(int j=0;j<ch.length;j++) 
+	    {
+	    	if(hm.containsKey(ch[j])) 
+	    	{
+	           hm.replace(ch[j], 1);
+	    	}
+	    	
+	    }
+	    return(!hm.containsValue(0)) ;
+	  
+	    
+	    
+	    		
+    }
+}
